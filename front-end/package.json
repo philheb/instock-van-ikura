@@ -12,10 +12,10 @@
     "sass-loader": "^7.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "cross-env NODE_ENV=production react-scripts start",
+    "build": "cross-env NODE_ENV=production react-scripts build",
+    "test": "cross-env NODE_ENV=production react-scripts test",
+    "eject": "cross-env NODE_ENV=production react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -25,5 +25,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  }
 }
