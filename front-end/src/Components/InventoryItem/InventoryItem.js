@@ -15,12 +15,8 @@ state = {
       this.setState({className: 'hide'})
     }
   }
- 
 
   render() {
-    // if (this.props.eventListener){
-    //   console.log(this.props.eventListener)
-    // }
     return (
       <tr>
         <td data-label="ITEM">
