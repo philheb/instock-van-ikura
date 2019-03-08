@@ -115,16 +115,6 @@ input.search {
   }
 }
 
-input.search {
-  padding: 16px;
-  border-radius: 8px;
-  height: 25px;
-  background-image: url("../../Assets//Icons/Icon-search.svg");
-  background-repeat: no-repeat;
-  background-position: 5% 50%;
-  text-indent: 20px;
-}
-
 table.Inventorytable {
   border-collapse: collapse;
   width: 100%;
