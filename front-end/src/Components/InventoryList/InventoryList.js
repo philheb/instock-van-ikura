@@ -18,13 +18,11 @@ class InventoryList extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(inventoryURL)
-      .then(response => {
-        this.setState({
-          data: response.data
-        })
+    axios.get(inventoryURL).then(response => {
+      this.setState({
+        data: response.data,
       })
-      
+    })
   }
 
   handleAddingInventory = () => {
@@ -36,16 +34,32 @@ class InventoryList extends React.Component {
   }
 
   handleNewInventory = newInventory => {
-    console.log(newInventory)
+    const inStock = newInventory.inStock
+    let status = inStock ? 'In Stock' : 'Out of Stock'
+
+    const addedInventory = {
+      item: newInventory.product,
+      description: newInventory.description,
+      lastOrdered: newInventory.lastOrdered,
+      city: newInventory.city,
+      country: newInventory.country,
+      quantity: newInventory.quantity,
+      status: status,
+    }
+
+    axios.post(inventoryURL, addedInventory).then(response => {
+      this.setState({
+        data: response.data,
+      })
+    })
   }
 
-  reloadData = ()=> {
-    axios.get(inventoryURL)
-      .then(response => {
-        this.setState({
-          data: response.data
-        })
+  reloadData = () => {
+    axios.get(inventoryURL).then(response => {
+      this.setState({
+        data: response.data,
       })
+    })
   }
   render() {
     let rows = this.state.data.map((item, i) => {
@@ -59,8 +73,8 @@ class InventoryList extends React.Component {
           status={item.status}
           key={i}
           data={item}
-          reloadData = {this.reloadData}
-          inventoryURL ={inventoryURL}
+          reloadData={this.reloadData}
+          inventoryURL={inventoryURL}
           eventTypes="click"
         />
       )
