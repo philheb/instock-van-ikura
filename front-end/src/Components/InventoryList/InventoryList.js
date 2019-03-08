@@ -75,6 +75,7 @@ class InventoryList extends React.Component {
           data={item}
           reloadData={this.reloadData}
           inventoryURL={inventoryURL}
+          eventTypes="click"
         />
       )
     })

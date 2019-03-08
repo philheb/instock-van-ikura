@@ -3,99 +3,81 @@
     "id": "e6f704ba-3f97-11e9-b210-d663bd873d93",
     "item": "Karjen extra 9th Edition",
     "description": "Here is a very brief description of the product…",
-    "name": "Terry Wilkes",
-    "lastOrdered": "03/30/2018",
+    "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
-    "referenceNumber": "JK2020FD7811201"
+    "status": "In Stock"
   },
   {
     "id": "e6f70870-3f97-11e9-b210-d663bd873d93",
-    "item": "Alpha Dubzap",
+    "item": "Product Name Here",
     "description": "Here is a very brief description of the product…",
-    "name": "Earl Mata",
-    "lastOrdered": "03/31/2018",
+    "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "Out of Stock",
-    "referenceNumber": "JK2020FD7811201"
+    "status": "In Stock"
   },
   {
     "id": "e6f709e2-3f97-11e9-b210-d663bd873d93",
-    "item": "Zum-Dom",
+    "item": "Product Name Here",
     "description": "Here is a very brief description of the product…",
-    "name": "Zachariah Reilly",
-    "lastOrdered": "04/20/2018",
+    "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
-    "referenceNumber": "JK2020FD7811201"
+    "status": "In Stock"
   },
   {
     "id": "e6f70b22-3f97-11e9-b210-d663bd873d93",
-    "item": "Rantech",
+    "item": "Product Name Here",
     "description": "Here is a very brief description of the product…",
-    "name": "Jad Parks",
-    "lastOrdered": "08/31/2018",
+    "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "Out of Stock",
-    "referenceNumber": "JK2020FD7811201"
+    "status": "In Stock"
   },
   {
     "id": "e6f70e60-3f97-11e9-b210-d663bd873d93",
-    "item": "Xxx-traxfresh",
+    "item": "Product Name Here",
     "description": "Here is a very brief description of the product…",
-    "name": "Joan Bean",
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
-    "referenceNumber": "JK2020FD7811201"
+    "status": "In Stock"
   },
   {
     "id": "e6f710ea-3f97-11e9-b210-d663bd873d93",
-    "item": "Lightzunlab",
+    "item": "Product Name Here",
     "description": "Here is a very brief description of the product…",
-    "name": "Anushka Snider",
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "Out of Stock",
-    "referenceNumber": "JK2020FD7811201"
+    "status": "In Stock"
   },
   {
     "id": "e6f71252-3f97-11e9-b210-d663bd873d93",
-    "item": "Air Nimsoft",
+    "item": "Product Name Here",
     "description": "Here is a very brief description of the product…",
-    "name": "Khloe Kinney",
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
-    "referenceNumber": "JK2020FD7811201"
+    "status": "In Stock"
   },
   {
     "id": "e6f71388-3f97-11e9-b210-d663bd873d93",
-    "item": "Lam Domdom",
+    "item": "Product Name Here",
     "description": "Here is a very brief description of the product…",
-    "name": "Mildred Carrillo",
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "Out of Stock",
-    "referenceNumber": "JK2020FD7811201"
+    "status": "In Stock"
   },
   {
     "id": "e6f715b8-3f97-11e9-b210-d663bd873d93",
-    "item": "Qvotop",
+    "item": "Product Name Here",
     "description": "Here is a very brief description of the product…",
-    "name": "Lacey-May Rojas",
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "Out of Stock",
-    "referenceNumber": "JK2020FD7811201"
+    "status": "In Stock"
   }
 ]
