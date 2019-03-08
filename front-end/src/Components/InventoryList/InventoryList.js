@@ -19,7 +19,6 @@ class InventoryList extends React.Component {
         this.setState({
           data: response.data
         })
-        console.log(this.state.data)
       })
   }
 
@@ -29,7 +28,6 @@ class InventoryList extends React.Component {
         this.setState({
           data: response.data
         })
-        console.log(this.state.data)
       })
   }
   render() {
@@ -46,6 +44,7 @@ class InventoryList extends React.Component {
           data={item}
           reloadData = {this.reloadData}
           inventoryURL ={inventoryURL}
+          eventTypes="click"
         />
       )
     })
