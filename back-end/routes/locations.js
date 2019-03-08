@@ -2,12 +2,12 @@ const express = require('express')
 const router = express.Router()
 const locationList = require('../data/locations.json')
 const bodyParser = require('body-parser')
-
+const uuid = require('uuid')
 const LOCATION__DATA__FILE = './data/locations.json'
 const fs = require('fs')
 router.use(bodyParser.json())
-router.use(express.static('website'));
-router.use(bodyParser.urlencoded({ extended: false }));
+router.use(express.static('website'))
+router.use(bodyParser.urlencoded({ extended: false }))
 
 // Route    Get routes/locations
 // Desc     Return the location list
@@ -28,59 +28,41 @@ router.get('/:locationId', (req, res) => {
 // posting inventory item to inventory.json
 
 router.post('/', (req, res) => {
-  const warehouseDetail =
-  {
-    "id": "4a8e2ae0-3f97-11e9-b210-d663bd873d93",
-    "name": "Warehouse Number 1",
-    "address": "469 King St W, Toronto, ON",
-    "managerName": "Mara Weinberg",
-    "managerTitle": "Warehouse Manager",
-    "phone": "+1 416 678 2345",
-    "email": "weinberg@instack.com",
-    "categories": "Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation",
-    "inventory": [
-      {
-        "id": "e6f704ba-3f97-11e9-b210-d663bd873d93",
-        "item": "Product Name Here",
-        "description": "Here is a very brief description of the product…",
-        "lastOrdered": "05/24/2018",
-        "location": "Toronto, CAN",
-        "quantity": "12,000",
-        "status": "In Stock"
-      }]
+  const newWarehouse = {
+    id: uuid.v4(),
+    name: req.body.name,
+    address: `${req.body.address}, ${req.body.location} `,
+    managerName: req.body.managerName,
+    managerTitle: req.body.managerTitle,
+    phone: req.body.phone,
+    email: req.body.email,
+    categories: req.body.categories,
+    inventory: [],
   }
 
-  locationList.push(warehouseDetail)
-  fs.writeFile(LOCATION__DATA__FILE, JSON.stringify(locationList), (err) => {
+  locationList.push(newWarehouse)
+  fs.writeFile(LOCATION__DATA__FILE, JSON.stringify(locationList), err => {
     if (err) {
-      console.error('Error writing to file:', err);
-      return;
-    };
-    console.log("Warehouse has been added");
-  });
+      console.error('Error writing to file:', err)
+      return
+    }
+    console.log('Warehouse has been added')
+  })
 
-
-  if (!warehouseDetail.id ||
-    !warehouseDetail.name ||
-    !warehouseDetail.address ||
-    !warehouseDetail.managerName ||
-    !warehouseDetail.managerTitle ||
-    !warehouseDetail.phone ||
-    !warehouseDetail.name ||
-    !warehouseDetail.categories ||
-    !warehouseDetail.inventory) {
-    return res.status(400).send("Please fill in the blank");
+  if (
+    !newWarehouse.id ||
+    !newWarehouse.name ||
+    !newWarehouse.address ||
+    !newWarehouse.managerName ||
+    !newWarehouse.managerTitle ||
+    !newWarehouse.phone ||
+    !newWarehouse.name ||
+    !newWarehouse.categories ||
+    !newWarehouse.inventory
+  ) {
+    return res.status(400).send('Please fill in the blank')
   }
   res.json(locationList)
-});
-
-
-
-
-
-
-
-
-
+})
 
 module.exports = router

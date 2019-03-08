@@ -2,7 +2,6 @@
 
 td {
   border-bottom: 2px solid #afafaf;
-  
 
   text-align: left;
   padding: 24px 0px;
@@ -62,3 +61,25 @@ td:first-child {
   }
 }
 
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+.hide {
+  display: none;
+}
+
+.show {
+  position: absolute;
+  padding: 1rem;
+  right: 1rem;
+  background-color: white;
+  border: 1px #afafaf solid;
+  padding-right: 4rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.show:hover {
+  background-color: grey;
+}

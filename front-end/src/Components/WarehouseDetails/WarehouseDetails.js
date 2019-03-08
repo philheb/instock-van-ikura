@@ -14,8 +14,9 @@ export default function WarehouseDetails() {
           <Link to="/warehouses">
             <img src={backArrow} alt="back-arrow" />
           </Link>
-          <h1>Warehouse Name</h1>
+          <h1 className="locationDetails__title">Warehouse Name</h1>
         </div>
+        <hr className="locationDetails__title--hr" />
         <div className="locationDetails__contacts">
           <div className="locationDetails__top--section">
             <h5 className="locationDetails__label">ADDRESS</h5>

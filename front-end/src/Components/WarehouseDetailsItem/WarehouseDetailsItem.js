@@ -33,7 +33,7 @@ export default function WarehouseDetailsItem() {
             <img id="locationDetails__kebab" src={kebab} alt="kebab" />
           </div>
         </div>
-        <hr />
+        <hr className="locationDetails__item--hr" />
         <div className="locationDetails__inventory">
           <div className="locationDetails__inventory--section">
             <h5>ITEM</h5>
@@ -62,7 +62,7 @@ export default function WarehouseDetailsItem() {
             <img id="locationDetails__kebab" src={kebab} alt="kebab" />
           </div>
         </div>
-        <hr />
+        <hr className="locationDetails__item--hr" />
         <div className="locationDetails__inventory">
           <div className="locationDetails__inventory--section">
             <h5>ITEM</h5>
@@ -91,7 +91,7 @@ export default function WarehouseDetailsItem() {
             <img id="locationDetails__kebab" src={kebab} alt="kebab" />
           </div>
         </div>
-        <hr />
+        <hr className="locationDetails__item--hr" />
       </div>
     </div>
   )

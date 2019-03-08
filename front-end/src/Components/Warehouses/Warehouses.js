@@ -7,34 +7,42 @@ import Modal from '../UI/Modal/Modal'
 import addIcon from '../../Assets/Icons/Icon-add.svg'
 import './Warehouses.scss'
 
-const locationURL = "http://localhost:8080/locations/"
+const locationURL = 'http://localhost:8080/locations/'
 class Warehouses extends Component {
   constructor() {
     super()
     this.state = {
       data: [],
-      adding: false
+      adding: false,
     }
   }
 
   componentDidMount() {
-    axios.get(locationURL)
-      .then(response => {
-        this.setState({
-          data: response.data
-        })
-        console.log(this.state.data)
+    axios.get(locationURL).then(response => {
+      this.setState({
+        data: response.data,
       })
+    })
   }
 
   handleAddingLocation = () => {
     this.setState({ adding: true })
-    console.log(this.state.adding)
   }
 
   handleCancelAddingLocation = () => {
     this.setState({ adding: false })
-    console.log(this.state.adding)
+  }
+
+  handleNewLocation = newLocation => {
+    axios
+      .post(locationURL, newLocation)
+      .then(response => {
+        this.setState({
+          data: response.data,
+        })
+      })
+      .then(this.setState({ adding: false }))
+      .catch(err => console.log(err))
   }
 
   render() {
@@ -58,13 +66,23 @@ class Warehouses extends Component {
           show={this.state.adding}
           closeModal={this.handleCancelAddingLocation}
         >
-          <AddWarehouse />
+          <AddWarehouse
+            closeModal={this.handleCancelAddingLocation}
+            handleNewLocation={this.handleNewLocation}
+          />
         </Modal>
-        <Navbar routeProps={this.props.routeProps} />
+        <Navbar
+          routeProps={this.props.routeProps}
+          className="location__navbar"
+        />
         <div className="location__container">
           <div className="location__header">
             <h1 className="location__title">Locations</h1>
-            <input type="text" placeholder="Search" className="search" />
+            <input
+              type="text"
+              placeholder="Search"
+              className="location__search"
+            />
           </div>
           <div className="locations">{rows}</div>
           <div className="location__add btn-add">

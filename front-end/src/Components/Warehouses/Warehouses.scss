@@ -54,6 +54,22 @@ $break-desktop: 1440px;
   }
 }
 
+.location__search {
+  min-width: 252px;
+  border: 2px solid #e1e1e1;
+  padding: 16px;
+  border-radius: 8px;
+  height: 48px;
+  background-image: url("../../Assets//Icons/Icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  text-indent: 20px;
+  outline: none;
+}
+.location__search:focus {
+  border: 2px solid #323232;
+}
+
 .location__title {
   margin-bottom: 16px;
 }
@@ -81,6 +97,9 @@ $break-desktop: 1440px;
     flex-direction: row;
     justify-content: space-between;
   }
+  @media only screen and (min-width: $break-desktop) {
+    width: 70%;
+  }
 }
 
 .location h4 {
@@ -99,10 +118,7 @@ $break-desktop: 1440px;
 .location__section {
   margin-bottom: 24px;
   @media only screen and (min-width: $break-tablet) {
-    max-width: 300px;
-  }
-  @media only screen and (min-width: $break-desktop) {
-    min-width: 250px;
+    width: 260px;
   }
 }
 
@@ -136,6 +152,7 @@ $break-desktop: 1440px;
   height: 60px;
   border-radius: 50%;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   @media only screen and (min-width: $break-tablet) {
     left: 80vw;
     top: 85vh;
@@ -145,4 +162,9 @@ $break-desktop: 1440px;
 .location__add--btn {
   width: 20px;
   height: 20px;
+}
+
+.location__navbar {
+  @media only screen and (min-width: $break-desktop) {
+  }
 }

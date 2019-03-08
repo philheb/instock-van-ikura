@@ -13,6 +13,9 @@
 .locationDetails h1 {
   font-size: 24px;
   font-weight: bold;
+  @media only screen and (min-width: $break-tablet) {
+    @include h1-font;
+  }
 }
 
 .locationDetails h4 {
@@ -30,10 +33,22 @@
   flex-direction: row;
   align-items: center;
   margin: 32px 0;
+  @media only screen and (min-width: $break-desktop) {
+    margin: 48px 0 40px 0;
+  }
 }
 
 .locationDetails__header img {
   margin-right: 20px;
+}
+
+.locationDetails__title--hr {
+  display: none;
+  width: 100%;
+  margin-bottom: 40px;
+  @media only screen and (min-width: $break-tablet) {
+    display: block;
+  }
 }
 
 .locationDetails__contacts {
@@ -91,7 +106,7 @@
   }
 }
 
-.locationDetails hr {
+.locationDetails__item--hr {
   margin: 24px 16px 0 16px;
   @media only screen and (min-width: $break-tablet) {
     margin: 24px 24px 0 24px;
