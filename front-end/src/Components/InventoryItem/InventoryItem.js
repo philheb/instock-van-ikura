@@ -3,6 +3,7 @@ import dot from '../../Assets/Icons/Icon-kebab-default.svg'
 import { Link } from 'react-router-dom'
 import "./InventoryItem.css"
 import axios from "axios"
+import onClickOutside from "react-onclickoutside"
 
 class InventoryItem extends React.Component {
   state = {
@@ -18,7 +19,11 @@ class InventoryItem extends React.Component {
 
   deleteItem = (id) => {
     axios.delete(`${this.props.inventoryURL}${id}`)
-    .then(this.props.reloadData)
+      .then(this.props.reloadData)
+  }
+
+  handleClickOutside = () => {
+    this.setState({ className: 'hide' })
   }
 
   render() {
@@ -38,16 +43,16 @@ class InventoryItem extends React.Component {
         <td data-label="DOT">
           <div className="dropdown" onClick={this.toggleClass}>
             <img src={dot} alt="" className="pointer" />
-            <div className={this.state.className} ref={self => this.hide = self} onClick={() => this.deleteItem(this.props.data.id)}>Remove</div>
+            <div className={this.state.className} ref={self => this.hide = self} 
+            onClick={() => this.deleteItem(this.props.data.id)}>
+            Remove</div>
           </div>
-
         </td>
-
       </tr>
     )
   }
 }
 
 
-export default InventoryItem
+export default onClickOutside(InventoryItem)
 

@@ -18,9 +18,17 @@ class InventoryList extends React.Component {
   }
 
   componentDidMount() {
+<<<<<<< HEAD
     axios.get(inventoryURL).then(response => {
       this.setState({
         data: response.data,
+=======
+    axios.get(inventoryURL)
+      .then(response => {
+        this.setState({
+          data: response.data
+        })
+>>>>>>> hidewhenclickoutside
       })
       console.log(this.state.data)
     })
@@ -38,10 +46,19 @@ class InventoryList extends React.Component {
     console.log(newInventory)
   }
 
+<<<<<<< HEAD
   reloadData = () => {
     axios.get(inventoryURL).then(response => {
       this.setState({
         data: response.data,
+=======
+  reloadData = ()=> {
+    axios.get(inventoryURL)
+      .then(response => {
+        this.setState({
+          data: response.data
+        })
+>>>>>>> hidewhenclickoutside
       })
       console.log(this.state.data)
     })
@@ -58,8 +75,14 @@ class InventoryList extends React.Component {
           status={item.status}
           key={i}
           data={item}
+<<<<<<< HEAD
           reloadData={this.reloadData}
           inventoryURL={inventoryURL}
+=======
+          reloadData = {this.reloadData}
+          inventoryURL ={inventoryURL}
+          eventTypes="click"
+>>>>>>> hidewhenclickoutside
         />
       )
     })
