@@ -17,7 +17,7 @@ class InventoryItem extends React.Component {
   }
 
   deleteItem = (id) => {
-    axios.delete(`http://localhost:8080/inventory/${id}`)
+    axios.delete(`${this.props.inventoryURL}${id}`)
     .then(this.props.reloadData)
   }
 

@@ -45,6 +45,7 @@ class InventoryList extends React.Component {
           key={i}
           data={item}
           reloadData = {this.reloadData}
+          inventoryURL ={inventoryURL}
         />
       )
     })
