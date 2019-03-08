@@ -4,16 +4,23 @@ import { Link } from 'react-router-dom'
 import "./InventoryItem.css"
 
 class InventoryItem extends React.Component {
-
+state = {
+  className: "hide",
+  
+}
   toggleClass = () => {
     if (this.hide.className === "hide") {
-      this.hide.className = 'show'
+      this.setState({className: 'show'})      
     } else {
-      this.hide.className = "hide"
+      this.setState({className: 'hide'})
     }
   }
+ 
 
   render() {
+    // if (this.props.eventListener){
+    //   console.log(this.props.eventListener)
+    // }
     return (
       <tr>
         <td data-label="ITEM">
@@ -29,9 +36,9 @@ class InventoryItem extends React.Component {
         <td data-label="QUANTITY">{this.props.data.quantity}</td>
         <td data-label="STATUS">{this.props.data.status}</td>
         <td data-label="DOT">
-          <div className="dropdown">
-          <img src={dot} alt="" onClick={this.toggleClass} className="pointer"/>
-            <div className='hide' ref={self => this.hide = self} name={this.props.data.id}>Remove</div>
+          <div className="dropdown" onClick={this.toggleClass}>
+          <img src={dot} alt=""  className="pointer"/>
+            <div id ="closeAll"className={this.state.className} ref={self => this.hide = self} name={this.props.data.id}>Remove</div>
           </div>
 
         </td>
