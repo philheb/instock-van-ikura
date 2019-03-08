@@ -98,6 +98,12 @@
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .location__bottom {
+    width: 70%;
+  }
+}
+
 .location h4 {
   font-size: 14px;
   line-height: 22px;
@@ -118,13 +124,7 @@
 
 @media only screen and (min-width: 768px) {
   .location__section {
-    max-width: 300px;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .location__section {
-    min-width: 250px;
+    width: 260px;
   }
 }
 

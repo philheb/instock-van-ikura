@@ -27,6 +27,11 @@
       width: 220px;
     }
   }
+
+  .input:focus {
+    border: 2px solid #323232;
+  }
+
   .description {
     height: 80px;
     @media only screen and (min-width: $break-tablet) {
@@ -43,6 +48,7 @@
   }
   .btn-action {
     height: 48px;
+    outline: none;
     cursor: pointer;
     @media only screen and (min-width: $break-tablet) {
       width: 160px;
@@ -53,10 +59,16 @@
     background-color: #004892;
     border-radius: 5px;
   }
+  .btn-save:hover {
+    background-color: #002f5f;
+  }
   .btn-cancel {
     background-color: white;
     color: #004892;
     border: none;
+  }
+  .btn-cancel {
+    color: #002f5f;
   }
 }
 

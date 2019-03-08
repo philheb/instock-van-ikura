@@ -44,6 +44,23 @@
   }
 }
 
+.location__search {
+  min-width: 252px;
+  border: 2px solid #e1e1e1;
+  padding: 16px;
+  border-radius: 8px;
+  height: 48px;
+  background-image: url("../../Assets//Icons/Icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  text-indent: 20px;
+  outline: none;
+}
+
+.location__search:focus {
+  border: 2px solid #323232;
+}
+
 .location__title {
   margin-bottom: 16px;
 }
@@ -98,6 +115,12 @@
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .location__bottom {
+    width: 70%;
+  }
+}
+
 .location h4 {
   font-size: 14px;
   line-height: 22px;
@@ -118,13 +141,7 @@
 
 @media only screen and (min-width: 768px) {
   .location__section {
-    max-width: 300px;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .location__section {
-    min-width: 250px;
+    width: 260px;
   }
 }
 
@@ -219,6 +236,10 @@
   }
 }
 
+.AddWarehouse .input:focus {
+  border: 2px solid #323232;
+}
+
 .AddWarehouse .description {
   height: 80px;
 }
@@ -253,6 +274,7 @@
 
 .AddWarehouse .btn-action {
   height: 48px;
+  outline: none;
   cursor: pointer;
 }
 
@@ -268,10 +290,18 @@
   border-radius: 5px;
 }
 
+.AddWarehouse .btn-save:hover {
+  background-color: #002f5f;
+}
+
 .AddWarehouse .btn-cancel {
   background-color: white;
   color: #004892;
   border: none;
+}
+
+.AddWarehouse .btn-cancel {
+  color: #002f5f;
 }
 
 @media only screen and (min-width: 768px) {

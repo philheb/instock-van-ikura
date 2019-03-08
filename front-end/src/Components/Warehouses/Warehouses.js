@@ -71,11 +71,18 @@ class Warehouses extends Component {
             handleNewLocation={this.handleNewLocation}
           />
         </Modal>
-        <Navbar routeProps={this.props.routeProps} />
+        <Navbar
+          routeProps={this.props.routeProps}
+          className="location__navbar"
+        />
         <div className="location__container">
           <div className="location__header">
             <h1 className="location__title">Locations</h1>
-            <input type="text" placeholder="Search" className="search" />
+            <input
+              type="text"
+              placeholder="Search"
+              className="location__search"
+            />
           </div>
           <div className="locations">{rows}</div>
           <div className="location__add btn-add">
