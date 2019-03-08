@@ -2,11 +2,11 @@ import React from 'react'
 import dot from '../../Assets/Icons/Icon-kebab-default.svg'
 import { Link } from 'react-router-dom'
 import "./InventoryItem.css"
+import axios from "axios"
 
 class InventoryItem extends React.Component {
   state = {
     className: "hide",
-
   }
   toggleClass = () => {
     if (this.hide.className === "hide") {
@@ -16,8 +16,9 @@ class InventoryItem extends React.Component {
     }
   }
 
-  deleteItem = () => {
-    console.log('hi')
+  deleteItem = (id) => {
+    axios.delete(`http://localhost:8080/inventory/${id}`)
+    .then(this.props.reloadData)
   }
 
   render() {
@@ -37,7 +38,7 @@ class InventoryItem extends React.Component {
         <td data-label="DOT">
           <div className="dropdown" onClick={this.toggleClass}>
             <img src={dot} alt="" className="pointer" />
-            <div className={this.state.className} ref={self => this.hide = self} name={this.props.data.id} onClick={this.deleteItem}>Remove</div>
+            <div className={this.state.className} ref={self => this.hide = self} onClick={() => this.deleteItem(this.props.data.id)}>Remove</div>
           </div>
 
         </td>
