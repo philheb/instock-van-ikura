@@ -43,6 +43,9 @@ body {
 
 .inventorylist__container {
   margin: 0 16px;
+  @media (min-width: 1440px) {
+    padding: 0px 180px;
+      }
   @media only screen and (min-width: $tablet-breakpt) {
     margin: 0 24px;
   }
