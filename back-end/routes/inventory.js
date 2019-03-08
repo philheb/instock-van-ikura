@@ -18,17 +18,19 @@ router.get('/', (req, res) => {
 // posting inventory item to inventory.json
 
 router.post('/', (req, res) => {
-  const inventoryItemDetail = {
+  const newInventory = {
     id: uuid.v4(),
-    item: 'Product Name Here',
-    description: 'Here is a very brief description of the product…',
-    lastOrdered: '05/24/2018',
-    location: 'Toronto, CAN',
-    quantity: '12,000',
+    item: req.body.item,
+    description: req.body.description,
+    name: 'Terry Wilkes',
+    lastOrdered: req.body.lastOrdered,
+    location: `${req.body.city} ${req.body.country}`,
+    quantity: req.body.quantity,
     status: 'In Stock',
+    referenceNumber: 'JK2020FD7811201',
   }
 
-  inventoryList.push(inventoryItemDetail)
+  inventoryList.push(newInventory)
   fs.writeFile(INVENTORY__DATA__FILE, JSON.stringify(inventoryList), err => {
     if (err) {
       console.error(err)
@@ -38,12 +40,11 @@ router.post('/', (req, res) => {
   })
 
   if (
-    !inventoryItemDetail.item ||
-    !inventoryItemDetail.description ||
-    !inventoryItemDetail.lastOrdered ||
-    !inventoryItemDetail.location ||
-    !inventoryItemDetail.quantity ||
-    !inventoryItemDetail.status
+    !newInventory.item ||
+    !newInventory.lastOrdered ||
+    !newInventory.location ||
+    !newInventory.quantity ||
+    !newInventory.status
   ) {
     return res.status(400).send('Please fill in the blank')
   }
@@ -63,7 +64,6 @@ router.get('/:id', (req, res) => {
     res.send('No item found')
   }
 })
-
 
 // Route    DELETE routes/inventory/:id
 // Desc     Delete an inventory item

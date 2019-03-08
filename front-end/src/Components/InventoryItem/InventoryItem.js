@@ -1,25 +1,24 @@
 import React from 'react'
 import dot from '../../Assets/Icons/Icon-kebab-default.svg'
 import { Link } from 'react-router-dom'
-import "./InventoryItem.css"
-import axios from "axios"
-import onClickOutside from "react-onclickoutside"
+import './InventoryItem.css'
+import axios from 'axios'
+import onClickOutside from 'react-onclickoutside'
 
 class InventoryItem extends React.Component {
   state = {
-    className: "hide",
+    className: 'hide',
   }
   toggleClass = () => {
-    if (this.hide.className === "hide") {
+    if (this.hide.className === 'hide') {
       this.setState({ className: 'show' })
     } else {
       this.setState({ className: 'hide' })
     }
   }
 
-  deleteItem = (id) => {
-    axios.delete(`${this.props.inventoryURL}${id}`)
-      .then(this.props.reloadData)
+  deleteItem = id => {
+    axios.delete(`${this.props.inventoryURL}${id}`).then(this.props.reloadData)
   }
 
   handleClickOutside = () => {
@@ -43,9 +42,13 @@ class InventoryItem extends React.Component {
         <td data-label="DOT">
           <div className="dropdown" onClick={this.toggleClass}>
             <img src={dot} alt="" className="pointer" />
-            <div className={this.state.className} ref={self => this.hide = self} 
-            onClick={() => this.deleteItem(this.props.data.id)}>
-            Remove</div>
+            <div
+              className={this.state.className}
+              ref={self => (this.hide = self)}
+              onClick={() => this.deleteItem(this.props.data.id)}
+            >
+              Remove
+            </div>
           </div>
         </td>
       </tr>
@@ -53,6 +56,4 @@ class InventoryItem extends React.Component {
   }
 }
 
-
 export default onClickOutside(InventoryItem)
-
