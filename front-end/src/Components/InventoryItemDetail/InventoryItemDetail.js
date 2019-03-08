@@ -18,11 +18,10 @@ class InventoryItemDetails extends React.Component {
     axios.get(inventoryItemURL)
       .then(response => {
         this.setState({
-          data: response.data,
-          inventoryID: response.data[0].id
+          data: response.data
         })
       }).then(response => {
-        axios.get(inventoryItemDetailURL(this.state.inventoryID))
+        axios.get(inventoryItemDetailURL(this.props.match.params.id))
           .then(response => {
             const { description, name, id, item, lastOrdered,
               location, quantity, status, referenceNumber } = response.data
