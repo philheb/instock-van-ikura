@@ -19,9 +19,19 @@ class InventoryList extends React.Component {
         this.setState({
           data: response.data
         })
+        console.log(this.state.data)
       })
   }
 
+  reloadData = ()=> {
+    axios.get(inventoryURL)
+      .then(response => {
+        this.setState({
+          data: response.data
+        })
+        console.log(this.state.data)
+      })
+  }
   render() {
     let rows = this.state.data.map((item, i) => {
       return (
@@ -34,6 +44,8 @@ class InventoryList extends React.Component {
           status={item.status}
           key={i}
           data={item}
+          reloadData = {this.reloadData}
+          inventoryURL ={inventoryURL}
         />
       )
     })

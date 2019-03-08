@@ -64,7 +64,6 @@ router.get('/:id', (req, res) => {
   }
 })
 
-module.exports = router
 
 // Route    DELETE routes/inventory/:id
 // Desc     Delete an inventory item
