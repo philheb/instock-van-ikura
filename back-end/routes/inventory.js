@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
     description: req.body.description,
     name: 'Terry Wilkes',
     lastOrdered: req.body.lastOrdered,
-    location: `${req.body.city} ${req.body.country}`,
+    location: `${req.body.city}, ${req.body.country}`,
     quantity: req.body.quantity,
     status: 'In Stock',
     referenceNumber: 'JK2020FD7811201',
