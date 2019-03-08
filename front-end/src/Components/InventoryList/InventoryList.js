@@ -50,6 +50,7 @@ class InventoryList extends React.Component {
     axios.post(inventoryURL, addedInventory).then(response => {
       this.setState({
         data: response.data,
+        adding: false,
       })
     })
   }

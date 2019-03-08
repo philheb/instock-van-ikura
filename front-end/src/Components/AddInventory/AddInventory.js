@@ -42,7 +42,7 @@ export default class AddWarehouse extends Component {
             <input
               className="input"
               type="text"
-              placeholder="yyyy-mm-dd"
+              placeholder="dd/mm/yyyy"
               onChange={event =>
                 this.setState({ lastOrdered: event.target.value })
               }
