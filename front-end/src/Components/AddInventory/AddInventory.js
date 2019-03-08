@@ -92,6 +92,8 @@ export default class AddWarehouse extends Component {
                 checked={this.state.inStock}
                 uncheckedIcon={false}
                 checkedIcon={false}
+                width={40}
+                height={24}
               />
             </div>
           </div>

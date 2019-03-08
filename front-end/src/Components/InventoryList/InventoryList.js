@@ -22,7 +22,6 @@ class InventoryList extends React.Component {
       this.setState({
         data: response.data,
       })
-      console.log(this.state.data)
     })
   }
 
@@ -35,7 +34,24 @@ class InventoryList extends React.Component {
   }
 
   handleNewInventory = newInventory => {
-    console.log(newInventory)
+    const inStock = newInventory.inStock
+    let status = inStock ? 'In Stock' : 'Out of Stock'
+
+    const addedInventory = {
+      item: newInventory.product,
+      description: newInventory.description,
+      lastOrdered: newInventory.lastOrdered,
+      city: newInventory.city,
+      country: newInventory.country,
+      quantity: newInventory.quantity,
+      status: status,
+    }
+
+    axios.post(inventoryURL, addedInventory).then(response => {
+      this.setState({
+        data: response.data,
+      })
+    })
   }
 
   reloadData = () => {
@@ -43,7 +59,6 @@ class InventoryList extends React.Component {
       this.setState({
         data: response.data,
       })
-      console.log(this.state.data)
     })
   }
   render() {
