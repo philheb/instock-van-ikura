@@ -1,7 +1,7 @@
 import React from 'react'
 import dot from '../../Assets/Icons/Icon-kebab-default.svg'
 import { Link } from 'react-router-dom'
-import "./InventoryItem.css"
+import "./inventoryItem.css"
 
 class InventoryItem extends React.Component {
 
