@@ -8,6 +8,12 @@
           flex-direction: column;
 }
 
+h5 {
+  font-size: 12px;
+  line-height: 20px;
+  color: #999999;
+}
+
 .locations {
   width: 100%;
 }
@@ -63,6 +69,22 @@
 
 .location__title {
   margin-bottom: 16px;
+}
+
+.locations__head {
+  display: none;
+}
+
+@media only screen and (min-width: 1440px) {
+  .locations__head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 32px;
+  }
+  .locations__head h5 {
+    width: 242px;
+  }
 }
 
 .location {
@@ -141,7 +163,7 @@
 
 @media only screen and (min-width: 768px) {
   .location__section {
-    width: 260px;
+    width: 242px;
   }
 }
 
