@@ -41,6 +41,9 @@ class InventoryItemDetails extends React.Component {
   }
 
   render() {
+    if(this.state.status === "Out of Stock"){
+      this.stockStatus.id ="outstock__button"
+    }
 
     return (
       <div className="locationDetails">
@@ -53,7 +56,7 @@ class InventoryItemDetails extends React.Component {
             <h1 className="inventoryDetail__font">
               {this.state.item}
             </h1>
-            <button id="instock__button">
+            <button id="instock__button" ref ={self => this.stockStatus = self}>
               {this.state.status}
             </button>
           </div>

@@ -189,6 +189,15 @@ input.search {
   color: white;
 }
 
+#outstock__button {
+  background-color: red;
+  border-radius: 5px;
+  width: 96px;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+}
+
 .inventoryDetail__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

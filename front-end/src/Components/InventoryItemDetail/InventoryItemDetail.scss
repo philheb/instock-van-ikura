@@ -44,20 +44,26 @@
 #instock__button {
   background-color :#2eb82e;
   border-radius:5px;
- width: 88px;
- padding: 5px;
- font-weight: bold;
- color: white;
-  
+  width: 88px;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
 }
-
+#outstock__button {
+  background-color :red;
+  border-radius:5px;
+  width: 96px;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+}
 
 .inventoryDetail__wrapper {
   display: flex;
   flex-direction: row;
- padding: 40px 0px 48px 0px;
- border-top: 1.5px solid #afafaf;
- border-bottom: 1.5px solid #afafaf;
+  padding: 40px 0px 48px 0px;
+  border-top: 1.5px solid #afafaf;
+  border-bottom: 1.5px solid #afafaf;
   @media only screen and (max-width: $tablet-breakpt) {
     flex-direction: column;
   }
