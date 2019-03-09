@@ -16,7 +16,7 @@ class Navbar extends Component {
         return (
             <header className="tablet desktop">
                 <div className="logo__container" >
-                    <Link to="/"><img src='/Assets/Logo/Logo-instock.svg' alt='logo' className="logo" /></Link>
+                    <Link to="/inventory"><img src='/Assets/Logo/Logo-instock.svg' alt='logo' className="logo" /></Link>
                 </div>
 
                 <nav className="nav__wrapper">

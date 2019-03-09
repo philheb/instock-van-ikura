@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './styles/styles.scss'
 import { Switch, Route } from 'react-router-dom'
 import Inventory from './Components/Inventory/Inventory'
-import Home from './Components/Home/Home'
 import Warehouses from './Components/Warehouses/Warehouses'
 import WarehouseDetails from './Components/WarehouseDetails/WarehouseDetails'
 import InventoryItemDetail from './Components/InventoryItemDetail/InventoryItemDetail'
@@ -12,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Inventory} />
           <Route
             exact
             path="/warehouses"
