@@ -84,6 +84,12 @@ class Warehouses extends Component {
               className="location__search"
             />
           </div>
+          <div className="locations__head">
+            <h5>WAREHOUSE</h5>
+            <h5>CONTACT</h5>
+            <h5>CONTACT NAME</h5>
+            <h5>CATEGORIES</h5>
+          </div>
           <div className="locations">{rows}</div>
           <div className="location__add btn-add">
             <img

@@ -31,6 +31,10 @@ $break-desktop: 1440px;
   color: #999999;
 }
 
+h5 {
+  @include h5-font;
+}
+
 .locations {
   width: 100%;
 }
@@ -72,6 +76,17 @@ $break-desktop: 1440px;
 
 .location__title {
   margin-bottom: 16px;
+}
+
+.locations__head {
+  display: none;
+  @media only screen and (min-width: $break-desktop) {
+    display: flex;
+    margin-bottom: 32px;
+    h5 {
+      width: 242px;
+    }
+  }
 }
 
 .location {
@@ -118,7 +133,7 @@ $break-desktop: 1440px;
 .location__section {
   margin-bottom: 24px;
   @media only screen and (min-width: $break-tablet) {
-    width: 260px;
+    width: 242px;
   }
 }
 
