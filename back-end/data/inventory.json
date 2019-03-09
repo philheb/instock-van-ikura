@@ -6,78 +6,96 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock"
+    "name": "Ethan Bullock",
+    "status": "In Stock",
+    "referenceNumber": "JK2020FD7811201"
   },
   {
     "id": "e6f70870-3f97-11e9-b210-d663bd873d93",
-    "item": "Product Name Here",
+    "item": "S-kix",
     "description": "Here is a very brief description of the product…",
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock"
+    "name": "Simrah Curran",
+    "status": "Out of Stock",
+    "referenceNumber": "JK2020FD7811201"
   },
   {
     "id": "e6f709e2-3f97-11e9-b210-d663bd873d93",
-    "item": "Product Name Here",
+    "item": "Icedoneco",
     "description": "Here is a very brief description of the product…",
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock"
+    "name": "Tahmid Floyd",
+    "status": "In Stock",
+    "referenceNumber": "JK2020FD7811201"
   },
   {
     "id": "e6f70b22-3f97-11e9-b210-d663bd873d93",
-    "item": "Product Name Here",
+    "item": "Vaiaity",
     "description": "Here is a very brief description of the product…",
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock"
+    "name": "Nazia Armstrong",
+    "status": "Out of Stock",
+    "referenceNumber": "JK2020FD7811201"
   },
   {
     "id": "e6f70e60-3f97-11e9-b210-d663bd873d93",
-    "item": "Product Name Here",
+    "item": "White-Tom",
     "description": "Here is a very brief description of the product…",
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock"
+    "name": "Ethan Bullock",
+    "status": "In Stock",
+    "referenceNumber": "JK2020FD7811201"
   },
   {
     "id": "e6f710ea-3f97-11e9-b210-d663bd873d93",
-    "item": "Product Name Here",
+    "item": "Ecocof",
     "description": "Here is a very brief description of the product…",
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock"
+    "name": "Esmai Lowry",
+    "status": "Out of Stock",
+    "referenceNumber": "JK2020FD7811201"
   },
   {
     "id": "e6f71252-3f97-11e9-b210-d663bd873d93",
-    "item": "Product Name Here",
+    "item": "Bio Tough",
     "description": "Here is a very brief description of the product…",
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock"
+    "name": "Vikram Norman",
+    "status": "In Stock",
+    "referenceNumber": "JK2020FD7811201"
   },
   {
     "id": "e6f71388-3f97-11e9-b210-d663bd873d93",
-    "item": "Product Name Here",
+    "item": "Qvo-Ing",
     "description": "Here is a very brief description of the product…",
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock"
+    "name": "Heena Bradshaw",
+    "status": "Out of Stock",
+    "referenceNumber": "JK2020FD7811201"
   },
   {
     "id": "e6f715b8-3f97-11e9-b210-d663bd873d93",
-    "item": "Product Name Here",
+    "item": "Kinlex",
     "description": "Here is a very brief description of the product…",
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock"
+    "name": "Miriam Dyer",
+    "status": "Out of Stock",
+    "referenceNumber": "JK2020FD7811201"
   }
 ]
